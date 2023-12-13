@@ -36,6 +36,7 @@ class ShoelistFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Callback Code is form stackoverflow and android documentation
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 // Handle the back button event
@@ -90,7 +91,7 @@ class ShoelistFragment : Fragment() {
         binding.invalidateAll()
     }
 
-    @SuppressLint("ResourceAsColor")
+
     private fun createShoeTextView(e:Shoe):TextView{
         val listItem = TextView (context)
 

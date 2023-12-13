@@ -1,8 +1,5 @@
 package com.udacity.shoestore.shoelist
 
-import android.util.Log
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
