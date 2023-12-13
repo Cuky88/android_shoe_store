@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_img_scale_x">1dp</dimen>
+    <dimen name="drawer_img_scale_y">1.5dp</dimen>
+    <dimen name="drawer_img_translation_y">13dp</dimen>
+
+</resources>

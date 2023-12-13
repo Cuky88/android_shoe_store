@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navHeader"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/navHeaderImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/shoelist_logo_text"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/shoelist"
+        tools:srcCompat="@mipmap/shoelist" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- Save for later use-->
+<!--    android:scaleX="@dimen/drawer_img_scale_x"-->
+<!--    android:scaleY="@dimen/drawer_img_scale_y"-->
+<!--    android:translationY="@dimen/drawer_img_translation_y"-->

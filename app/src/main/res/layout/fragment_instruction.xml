@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:id="@+id/linearLayout_instruction"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".InstructionFragment"
+    android:layout_margin="8dp"
+    >
+
+    <TextView
+        android:id="@+id/instruction_title_text"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:text="@string/instruction_title_text"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        />
+
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/instructions_text" />
+
+    <Button
+        android:id="@+id/show_shoes_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/show_shoes_text"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        />
+
+</LinearLayout>
+</layout>

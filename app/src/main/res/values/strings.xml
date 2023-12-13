@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login_text">Login</string>
+    <string name="register_text">Register</string>
+    <string name="password_text">Password</string>
+    <string name="e_mail_text">e-Mail</string>
+    <string name="login_title_text">Login</string>
+    <string name="welcome_title_text">Welcome</string>
+    <string name="welcome_text">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. \"What\'s happened to me? \" he thought. It wasn\'t a dream. His room, a proper human</string>
+    <string name="instruction_title_text">Instructions</string>
+    <string name="show_shoes_text">Show Shoes</string>
+    <string name="instructions_text">When you click on the button \"Show Shoes\" you can brows all the shoes available in the database. So, have fun!</string>
+    <string name="logout_text">Logout</string>
+    <string name="log_me_out_text">Log me out</string>
+    <string name="shoelist_logo_text">Shoelist Logo</string>
+    <string name="shoe_details_text">Shoe details:</string>
+    <string name="double_format">%d</string>
+</resources>
