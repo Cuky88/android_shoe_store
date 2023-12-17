@@ -9,7 +9,7 @@ import com.udacity.shoestore.models.Shoe
 import timber.log.Timber
 import kotlin.random.Random
 
-class ShoelistViewModel: ViewModel() {
+class ShoelistViewModel(): ViewModel() {
     private var _shoeList: MutableList<Shoe> = mutableListOf()
 
     private var _shoeListPopu = MutableLiveData<MutableList<Shoe>>()

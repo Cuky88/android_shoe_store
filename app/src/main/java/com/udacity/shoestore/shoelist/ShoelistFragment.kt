@@ -27,7 +27,6 @@ import com.google.android.material.shape.MaterialShapeDrawable
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoelistBinding
 import com.udacity.shoestore.models.Shoe
-import org.xmlpull.v1.XmlPullParser
 import timber.log.Timber
 
 class ShoelistFragment : Fragment() {
@@ -40,6 +39,7 @@ class ShoelistFragment : Fragment() {
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 // Handle the back button event
+                // do nothing, just ignore backpress in this fragment
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
@@ -51,21 +51,18 @@ class ShoelistFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoelist, container, false)
 
-        binding.floatingActionButton.setOnClickListener{
-            findNavController().navigate(ShoelistFragmentDirections.actionShoelistFragmentToShoedetailFragment(
-                Shoe("", 0.0, "", "", mutableListOf("", ""))
-            ))
-        }
-
         viewModel = ViewModelProvider(requireActivity())[ShoelistViewModel::class.java]
         binding.shoelistViewModel = viewModel
         binding.lifecycleOwner = this
+
+        binding.floatingActionButton.setOnClickListener{
+            findNavController().navigate(ShoelistFragmentDirections.actionShoelistFragmentToShoedetailFragment())
+        }
 
         viewModel.shoeListPopu.observe(viewLifecycleOwner){
             createShoelistViews(it)
 //            Toast.makeText(this.context, "New Shoe added, total: ${it.size} shoes.", Toast.LENGTH_LONG).show()
         }
-
 
         setHasOptionsMenu(true)
         // Inflate the layout for this fragment

@@ -3,31 +3,32 @@ package com.udacity.shoestore.shoelist
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.udacity.shoestore.models.Shoe
 import timber.log.Timber
 
 
-class ShoedetailViewModel(shoeNameVar: String, companyNameVar: String,
-                                   descriptionVar: String, shoeSizeVar: Double):ViewModel() {
-
-    private var _shoeName= MutableLiveData<String>()
+class ShoedetailViewModel():ViewModel() {
+    var _shoeName= MutableLiveData<String>()
     val shoeName: LiveData<String> get() = _shoeName
 
-    private var _companyName= MutableLiveData<String>()
+    var _companyName= MutableLiveData<String>()
     val companyName: LiveData<String> get() = _companyName
 
-    private var _description= MutableLiveData<String>()
+    var _description= MutableLiveData<String>()
     val description: LiveData<String> get() = _description
 
-    private var _shoeSize= MutableLiveData<Double>()
-    val shoeSize: LiveData<Double> get() = _shoeSize
+    var _shoeSize= MutableLiveData<String>()
+    val shoeSize: LiveData<String> get() = _shoeSize
 
     init {
         Timber.tag("ShoedetailViewModel").i("ShoedetailViewModel created!")
-
-        _shoeName.value = shoeNameVar.toString()
-        _companyName.value = companyNameVar.toString()
-        _description.value = descriptionVar.toString()
-        _shoeSize.value = shoeSizeVar
     }
 
+    fun retrieveNewShoe(): Shoe {
+        if ((_shoeName.value == null) or (_companyName.value == null) or (_description.value == null) or (_shoeSize.value == null)){
+             Timber.tag("ShoedetailViewModel").i("No shoe details entered!")
+            return Shoe("", 0.0, "", "", mutableListOf(""))
+        }
+        return Shoe(_shoeName.value.toString(), _shoeSize.value.toString().toDouble(), _companyName.value.toString(), _description.value.toString(), mutableListOf(""))
+    }
 }
