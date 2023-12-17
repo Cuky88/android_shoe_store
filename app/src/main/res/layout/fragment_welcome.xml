@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Since this layout only contains vertically positioned simple views, no ConstraintLayout needed -->
 <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"

@@ -7,7 +7,12 @@
         <variable
             name="shoedetailViewModel"
             type="com.udacity.shoestore.shoelist.ShoedetailViewModel" />
+        <variable
+            name="shoelistViewModel"
+            type="com.udacity.shoestore.shoelist.ShoelistViewModel" />
     </data>
+
+    <!-- ConstraintLayout used for better positioning of different views w.r.t. to each other -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
@@ -43,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Shoe Name"
+            android:text="@={shoedetailViewModel._shoeName}"
             android:inputType="text"
-            android:text="@{shoedetailViewModel.shoeName}"
             app:layout_constraintStart_toEndOf="@+id/textView_group"
             app:layout_constraintTop_toBottomOf="@+id/shoedetails_title_text" />
 
@@ -54,8 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Company Name"
+            android:text="@={shoedetailViewModel._companyName}"
             android:inputType="text"
-            android:text="@{shoedetailViewModel.companyName}"
             app:layout_constraintStart_toEndOf="@+id/textView_group"
             app:layout_constraintTop_toBottomOf="@+id/shoename_edit" />
 
@@ -65,8 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Shoe Size"
+            android:text="@={shoedetailViewModel._shoeSize}"
             android:inputType="numberDecimal"
-            android:text="@{String.valueOf(shoedetailViewModel.shoeSize)}"
             app:layout_constraintStart_toEndOf="@+id/textView_group"
             app:layout_constraintTop_toBottomOf="@+id/companyname_edit" />
 
@@ -76,8 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Description"
+            android:text="@={shoedetailViewModel._description}"
             android:inputType="text"
-            android:text="@{shoedetailViewModel.description}"
             app:layout_constraintStart_toEndOf="@+id/textView_group"
             app:layout_constraintTop_toBottomOf="@+id/shoesize_edit" />
 

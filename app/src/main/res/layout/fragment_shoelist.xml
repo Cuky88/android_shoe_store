@@ -8,6 +8,7 @@
             name="shoelistViewModel"
             type="com.udacity.shoestore.shoelist.ShoelistViewModel" />
     </data>
+<!--  ConstraintLayout used for optimally positioning floating action button and ScrollView -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -2,6 +2,7 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Since this layout only contains one simple views, no ConstraintLayout needed -->
 <LinearLayout
     android:id="@+id/linearLayout_logout"
     android:layout_width="match_parent"
